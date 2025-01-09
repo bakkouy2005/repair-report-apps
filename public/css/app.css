@@ -1,0 +1,185 @@
+/* Algemene stijlen */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+h1, h2, h3 {
+    color: #333;
+    font-weight: bold;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Knopstijl */
+a.btn,
+button.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    margin-right: 10px; /* Zorgt voor ruimte tussen knoppen */
+    font-size: 14px;
+}
+
+a.btn:hover,
+button.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Geeft een subtiele hover-effect */
+}
+
+a.btn:active,
+button.btn:active {
+    transform: translateY(1px); /* Schaal de knop naar beneden tijdens het klikken */
+}
+
+button.btn-danger {
+    background-color: #e74c3c;
+}
+
+button.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+/* Flexbox voor knoppen */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Formulierstijl */
+form {
+    margin-top: 20px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #fafafa;
+}
+
+form textarea {
+    min-height: 100px;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Errorberichten */
+.error {
+    color: #ff0000;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Flexbox voor layout */
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Galerijweergave voor de rapporten */
+.report-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.report-gallery .card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px; /* Zorg voor een vaste hoogte zodat kaarten niet verschuiven */
+}
+
+.report-gallery .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.report-gallery .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.report-gallery .card-text {
+    font-size: 14px;
+    color: #666;
+    flex-grow: 1; /* Zorgt ervoor dat de tekst kan groeien zonder de knoppen naar beneden te duwen */
+}
+
+/* Zorg ervoor dat de knoppen altijd onderaan de kaart staan */
+.report-gallery .button-group {
+    margin-top: auto; /* Duwt de knoppen naar de onderkant van de kaart */
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.report-gallery .card .btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center; /* Zorgt ervoor dat de tekst in de knop gecentreerd wordt */
+}
+
+/* Responsive ontwerp */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .report-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}
